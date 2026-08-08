@@ -4,7 +4,7 @@
   "private": true,
   "description": "Matt Pocock's agent skills for real engineering",
   "type": "module",
-  "main": ".opencode/plugins/mattpocock-skills.js",
+  "main": ".opencode/plugins/zademy-skills.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/zademy/skills"
