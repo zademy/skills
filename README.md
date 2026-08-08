@@ -28,8 +28,9 @@ Two ways in, two philosophies. **The [Claude Code plugin](https://code.claude.co
 
 ### 1. Get the skills
 
-<details>
-<summary><strong>Claude Code</strong></summary>
+Installation differs by harness. If you use more than one, install the skills separately for each one: [Claude Code](#claude-code), [OpenCode](#opencode), [Codex](#codex), [Antigravity](#antigravity), [Cursor](#cursor), [Kimi Code](#kimi-code), [Gemini CLI](#gemini-cli), [Pi](#pi), [Any other agent](#any-other-agent).
+
+#### Claude Code
 
 ```bash
 claude plugins install mattpocock-skills
@@ -43,33 +44,93 @@ Or, from inside a session:
 
 It's in Claude Code's official marketplace, so there's nothing to add first, and updates arrive automatically.
 
-</details>
+#### OpenCode
 
-<details>
-<summary><strong>Codex, and other agents</strong></summary>
+Add the plugin to the `plugin` array in your `opencode.json` (global or project-level):
+
+```json
+{
+  "plugin": ["zademy-skills@git+https://github.com/zademy/skills.git"]
+}
+```
+
+Restart OpenCode. It installs the git-backed package at startup and the plugin registers the skill buckets automatically — no symlinks or extra config needed. Full instructions: [.opencode/INSTALL.md](./.opencode/INSTALL.md).
+
+#### Codex
+
+Uses the `.codex-plugin/plugin.json` manifest. From the Codex CLI, open the plugin manager:
+
+```
+/plugins
+```
+
+Install from this repository URL: `https://github.com/zademy/skills`.
+
+#### Antigravity
+
+Install as a plugin from this repository (it reads the `.agents/plugins/marketplace.json` marketplace):
 
 ```bash
-npx skills@latest add mattpocock/skills
+agy plugin install https://github.com/zademy/skills
+```
+
+Reinstall with the same command to update.
+
+#### Cursor
+
+Uses the `.cursor-plugin/plugin.json` manifest. In Cursor Agent chat:
+
+```text
+/add-plugin
+```
+
+Or point the plugin marketplace at this repository: `https://github.com/zademy/skills`.
+
+#### Kimi Code
+
+Uses the `.kimi-plugin/plugin.json` manifest. Open the plugin manager and install directly from this repository:
+
+```text
+/plugins install https://github.com/zademy/skills
+```
+
+#### Gemini CLI
+
+Uses the `gemini-extension.json` manifest and loads `GEMINI.md` as context:
+
+```bash
+gemini extensions install https://github.com/zademy/skills
+```
+
+Update later:
+
+```bash
+gemini extensions update zademy-skills
+```
+
+#### Pi
+
+Uses the `.pi/extensions/zademy-skills.ts` extension plus the `pi` field in `package.json`. Install as a Pi package from this repository:
+
+```bash
+pi install git:github.com/zademy/skills
+```
+
+For local development, run Pi with a checkout loaded as a temporary package:
+
+```bash
+pi -e /path/to/skills
+```
+
+#### Any other agent
+
+```bash
+npx skills@latest add zademy/skills
 ```
 
 Pick the skills you want, and which coding agents to install them on. **The installer lets you choose which skills to take — make sure `setup-matt-pocock-skills` is one of them.**
 
-A native Codex plugin is on the roadmap — see [`.agents/adr/0002-ship-as-a-claude-code-plugin.md`](./.agents/adr/0002-ship-as-a-claude-code-plugin.md).
-
-</details>
-
-<details>
-<summary><strong>For tinkerers</strong></summary>
-
-Use the same installer, on any agent — including Claude Code:
-
-```bash
-npx skills@latest add mattpocock/skills
-```
-
-It writes the skills into your repo as ordinary files you own and can edit. Nothing updates behind your back; pull my latest changes when you want them with `npx skills update`.
-
-</details>
+It writes the skills into your repo as ordinary files you own and can edit. Nothing updates behind your back; pull the latest changes when you want them with `npx skills update`.
 
 ### 2. Run `/setup-matt-pocock-skills`
 
