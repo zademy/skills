@@ -1,0 +1,21 @@
+{
+  "name": "zademy-skills",
+  "displayName": "Zademy Skills",
+  "description": "Matt Pocock's agent skills for real engineering: grilling, spec/ticket flows, TDD, code review, domain modelling and proven techniques",
+  "version": "1.2.3",
+  "author": {
+    "name": "zademy"
+  },
+  "homepage": "https://github.com/zademy/skills",
+  "repository": "https://github.com/zademy/skills",
+  "license": "MIT",
+  "keywords": [
+    "skills",
+    "tdd",
+    "code-review",
+    "grilling",
+    "domain-modeling",
+    "workflows"
+  ],
+  "skills": "./skills/"
+}

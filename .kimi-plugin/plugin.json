@@ -1,0 +1,33 @@
+{
+  "name": "zademy-skills",
+  "version": "1.2.3",
+  "description": "Matt Pocock's agent skills for real engineering: grilling, spec/ticket flows, TDD, code review, domain modelling and proven techniques.",
+  "author": {
+    "name": "zademy"
+  },
+  "homepage": "https://github.com/zademy/skills",
+  "license": "MIT",
+  "keywords": [
+    "engineering",
+    "skills",
+    "tdd",
+    "code-review",
+    "grilling",
+    "domain-modeling",
+    "productivity"
+  ],
+  "skills": "./skills/",
+  "skillInstructions": "Kimi Code tool mapping for these skills:\n\n- When a skill says to ask the user, ask clarifying questions, or present options, call Kimi Code's `AskUserQuestion` tool with 2-4 concrete options, recommended one first and suffixed `(Recommended)`.\n- When a skill refers to `TodoWrite`, use Kimi Code's `TodoList` tool.\n- When a skill asks to dispatch a subagent, use Kimi Code's `Agent` tool: `subagent_type: \"coder\"` for implementation/review work, `\"explore\"` for read-only exploration, `\"plan\"` for planning.\n- When a skill refers to the `Skill` tool, use Kimi Code's native `Skill` tool.\n- Use Kimi Code's `Read`, `Write`, `Edit`, `Bash`, `Grep`, `Glob`, `FetchURL`, and `WebSearch` tools by their actual exposed names.",
+  "interface": {
+    "displayName": "Zademy Skills",
+    "shortDescription": "Grilling, spec/ticket flows, TDD, code review and domain modelling workflows for coding agents",
+    "longDescription": "Use Zademy Skills to guide agent work through grilling sessions, spec and ticket flows, test-driven development, systematic diagnosis, code review, domain modelling and merge-conflict resolution.",
+    "developerName": "zademy",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/zademy/skills"
+  }
+}

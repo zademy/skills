@@ -17,7 +17,17 @@
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.7.0",
-    "@changesets/cli": "^2.30.0"
+    "@changesets/cli": "^2.30.0",
+    "@earendil-works/pi-coding-agent": "^0.84.1"
   },
-  "packageManager": "npm@10.9.4"
+  "packageManager": "npm@10.9.4",
+  "pi": {
+    "extensions": [
+      "./.pi/extensions/zademy-skills.ts"
+    ],
+    "skills": [
+      "./skills/engineering",
+      "./skills/productivity"
+    ]
+  }
 }

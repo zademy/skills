@@ -1,0 +1,42 @@
+{
+  "name": "zademy-skills",
+  "version": "1.2.3",
+  "description": "Matt Pocock's agent skills for real engineering — grilling, spec/ticket flows, TDD, code review, domain modelling and more. Plug-and-play, not vibe coding.",
+  "author": {
+    "name": "zademy",
+    "url": "https://github.com/zademy"
+  },
+  "homepage": "https://github.com/zademy/skills",
+  "repository": "https://github.com/zademy/skills",
+  "license": "MIT",
+  "keywords": [
+    "engineering",
+    "skills",
+    "tdd",
+    "code-review",
+    "grilling",
+    "domain-modeling",
+    "productivity"
+  ],
+  "skills": "./skills/",
+  "hooks": {},
+  "interface": {
+    "displayName": "Zademy Skills",
+    "shortDescription": "Grilling, spec/ticket flows, TDD, code review and domain modelling workflows for coding agents",
+    "longDescription": "Use Zademy Skills to guide agent work through grilling sessions, spec and ticket flows, test-driven development, systematic diagnosis, code review, domain modelling and merge-conflict resolution.",
+    "developerName": "zademy",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Grill me on this plan before I build it.",
+      "Review the changes since main."
+    ],
+    "websiteURL": "https://github.com/zademy/skills",
+    "privacyPolicyURL": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+    "termsOfServiceURL": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service"
+  }
+}
